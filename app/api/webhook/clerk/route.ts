@@ -43,7 +43,7 @@ export async function POST(req: Request) {
 
   const eventType = evt.type;
   if (eventType === "user.created" || eventType === "user.updated") {
-    /* const { id, email_addresses, first_name, last_name } = evt.data;
+    const { id, email_addresses, first_name, last_name } = evt.data;
     const email = email_addresses[0]?.email_address;
     const name = `${first_name} ${last_name}`;
 
@@ -59,7 +59,7 @@ export async function POST(req: Request) {
           return new Response("Error processing user data", { status: 500 });
         }
       }
-    }*/
+    }
   }
 
   return NextResponse.json(
